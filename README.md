@@ -11,7 +11,7 @@ This code was taken from @th3unkn0n and edited accordingly.
 ## HOW TO USE
 
 1. You need to have Python installed, just go to the Internet and install the latest version of Python
-2. Download the zip of this file
+2. Download the zip of this file (under the "Code" button in top right hand above)
 3. Use command prompt/terminal to go to the directory of this code
 ```
 cd/(Your Path)/Telegran-scraper-bot
