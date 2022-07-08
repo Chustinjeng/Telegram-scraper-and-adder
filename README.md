@@ -1,7 +1,7 @@
 # Telegram code for scraping members and adding them
 This is a code for scraping members of a telegram group and adding them into another group (**NOTE**: please do not use this code to spam people or mass-add people, this code does not supercede Telegram's laws so please use it carefully. We are also not responsible for any illegal activity using this code.)
 
-This code was taken and adapted from @th3unkn0n
+This code was taken from @th3unkn0n and edited accordingly.
 
 ## GENERATE API_ID AND API_HASH IN TELEGRAM
 - Go to my.telegram.org and log in
@@ -37,8 +37,8 @@ python3 scraper.py
 python3 add2group.py
 ```
 - Can add members to any of your groups
-- You can choose to name your new csv file, this is a new csv file **minus** all the new users added in the group
-- **Note**: The group's privacy settings should be public and allow you to add members in
+- You can choose to name your new csv file, this is a new csv file **minus** all the new users added in the target group
+- **Note**: The target group's privacy settings should be public and allow you to add members in
 
 ## Alternative
 - The codes can also be converted to .exe files
