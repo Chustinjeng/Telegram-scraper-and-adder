@@ -17,6 +17,20 @@ re="\033[1;31m"
 gr="\033[1;32m"
 cy="\033[1;36m"
 
+#function to edit the original member file and export the remaining list of member into a new CSV file
+#done so by reading the old csv file and writing new csv file that consists of only those who are not added
+def save_and_exit(input_file, n, name):
+    with open(input_file) as f:
+        csv_reader = csv.reader(f)
+        with open("%s.csv" %(name), "w", newline = '') as new_file:
+            csv_writer = csv.writer(new_file, delimiter=",", lineterminator="\n")
+            i = 0
+            for row in csv_reader:
+                if i > n or i == 0:
+                    csv_writer.writerow(row)
+                i += 1
+
+
 def banner():
     print(f"""
 {re}╔╦╗{cy}┌─┐┬  ┌─┐{re}╔═╗  ╔═╗{cy}┌─┐┬─┐┌─┐┌─┐┌─┐┬─┐
@@ -184,6 +198,7 @@ for user in users:
         print(gr+"added successfully!")
     except PeerFloodError:
         print(re+"[!] Getting Flood Error from tele! \n[!] Script is stopping now. \n[i] Please try again later after some time!")
+        save_and_exit(input_file, n, name)
         sys.exit(1)
     except UserPrivacyRestrictedError:
         print(re+"[i] The user's privacy setting does not allow you to do this. Skipping...")
@@ -198,17 +213,7 @@ for user in users:
         errorNum += 1
         continue
 
-#program to edit the old csv file to give the new csv file
-#done so by reading the old csv file and writing new csv file that consists of only those who are not added
-with open(input_file) as f:
-    csv_reader = csv.reader(f)
-    with open("%s.csv" %(name), "w", newline = '') as new_file:
-        csv_writer = csv.writer(new_file, delimiter=",", lineterminator="\n")
-        i = 0
-        for row in csv_reader:
-            if i > n or i == 0:
-                csv_writer.writerow(row)
-            i += 1
+save_and_exit(input_file, n, name)
 
 os.remove(input_file)
 print("Total number of members passed in is %d" %(n))
