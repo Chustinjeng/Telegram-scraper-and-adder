@@ -51,5 +51,4 @@ pyinstaller --onefile setup.py
 pyinstaller --onefile scraper.py
 pyinstaller --onefile add2group.py
 ```
-
-
+- You can run the codes by simply clicking on the .exe files
