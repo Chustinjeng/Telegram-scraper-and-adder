@@ -11,11 +11,12 @@ This code was taken and adapted from @th3unkn0n
 ## HOW TO USE
 
 1. You need to have Python installed, just go to the Internet and install the latest version of Python
-2. Use command prompt/terminal to go to the directory of this code
+2. Download the zip of this file
+3. Use command prompt/terminal to go to the directory of this code
 ```
 cd/(Your Path)/Telegran-scraper-bot
 ```
-3. Set up the program
+4. Set up the program
 ```
 python3 setup.py
 ```
@@ -25,13 +26,13 @@ python3 setup.py
 python3 setup.py
 ```
 - Choose "config" to set up your Telegram account (your api_id and api_hash and phone number needed)
-4. Start scraping members
+5. Start scraping members
 ```
 python3 scraper.py
 ```
 - Name your csv file to your preference, this is where all the users' details would be added to
 - Choose any group to scrape members from
-5. Start adding members to groups
+6. Start adding members to groups
 ```
 python3 add2group.py
 ```
